@@ -1,0 +1,19 @@
+{
+  "name": "hexo-slides",
+  "version": "0.0.1",
+  "description": "Presentation with Hexo",
+  "main": "index",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hexojs/hexo-slides.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hexojs/hexo-slides/issues"
+  },
+  "keywords": ["hexo", "slides", "presentation", "keynote", "reveal"],
+  "author": "Tommy Chen <tommy351@gmail.com> (http://zespia.tw)",
+  "license": {
+    "type": "MIT",
+    "url": "https://raw.github.com/tommy351/hexo/master/LICENSE"
+  }
+}
