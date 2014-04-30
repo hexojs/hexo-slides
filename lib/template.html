@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%- data.title %></title>
+    <link rel="stylesheet" href="<%= config.root %>_slides/css/reveal.min.css">
+    <link rel="stylesheet" href="<%= config.root %>_slides/css/theme/<%- data.options.theme %>.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <%= data.content %>
+      </div>
+    </div>
+    <script src="<%= config.root %>_slides/js/reveal.min.js"></script>
+    <script>
+    Reveal.initialize({
+      dependencies: [
+        {src: '<%= config.root %>_slides/lib/js/classList.js', condition: function() { return !document.body.classList; }}
+      ],
+      controls: <%= !!data.options.controls %>,
+      progress: <%= !!data.options.progress %>,
+      slide_number: <%= !!data.options.slide_number %>,
+      history: <%= !!data.options.history %>,
+      keyboard: <%= !!data.options.keyboard %>,
+      overview: <%= !!data.options.overview %>,
+      center: <%= !!data.options.center %>,
+      touch: <%= !!data.options.touch %>,
+      loop: <%= !!data.options.loop %>,
+      rtl: <%= !!data.options.rtl %>,
+      fragments: <%= !!data.options.fragments %>,
+      embedded: <%= !!data.options.embedded %>,
+      autoSlide: <%= +data.options.autoSlide %>,
+      autoSlideStoppable: <%= !!data.options.autoSlideStoppable %>,
+      mouseWheel: <%= !!data.options.mouseWheel %>,
+      hideAddressBar: <%= !!data.options.hideAddressBar %>,
+      previewLinks: <%= !!data.options.previewLinks %>,
+      transition: '<%= data.options.transition %>',
+      transitionSpeed: '<%= data.options.transition %>',
+      backgroundTransition: '<%= data.options.backgroundTransition %>',
+      viewDistance: <%= +data.options.autoSlide %>,
+      parallaxBackgroundImage: '<%= data.options.parallaxBackgroundImage %>',
+      parallaxBackgroundSize: '<%= data.options.parallaxBackgroundSize %>'
+    });
+    </script>
+  </body>
+</html>
