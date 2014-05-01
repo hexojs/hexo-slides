@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title><%- data.title %></title>
-    <link rel="stylesheet" href="<%= config.root %>_slides/css/reveal.min.css">
-    <link rel="stylesheet" href="<%= config.root %>_slides/css/theme/<%- data.options.theme %>.css">
+    <link rel="stylesheet" href="<%= config.root %><%= config.slides.slide_dir %>/css/reveal.min.css">
+    <link rel="stylesheet" href="<%= config.root %><%= config.slides.slide_dir %>/css/theme/<%- data.options.theme %>.css">
   </head>
   <body>
     <div class="reveal">
@@ -12,11 +12,11 @@
         <%= data.content %>
       </div>
     </div>
-    <script src="<%= config.root %>_slides/js/reveal.min.js"></script>
+    <script src="<%= config.root %><%= config.slides.slide_dir %>/js/reveal.min.js"></script>
     <script>
     Reveal.initialize({
       dependencies: [
-        {src: '<%= config.root %>_slides/lib/js/classList.js', condition: function() { return !document.body.classList; }}
+        {src: '<%= config.root %><%= config.slides.slide_dir %>/lib/js/classList.js', condition: function() { return !document.body.classList; }}
       ],
       controls: <%= !!data.options.controls %>,
       progress: <%= !!data.options.progress %>,
